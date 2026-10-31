@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" fill="none" role="img" aria-labelledby="cc-mark-title">
+  <title id="cc-mark-title">CurbCue Symbol Mark</title>
+  <!-- Warm Mineral Paper Ground Tile -->
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#146343"/>
+  <!-- Architectural Outer Curb 'C' -->
+  <path d="M26 16H44V26H26C22.6863 26 20 28.6863 20 32C20 35.3137 22.6863 38 26 38H44V48H26C17.1634 48 10 40.8366 10 32C10 23.1634 17.1634 16 26 16Z" fill="#F6F4EE"/>
+  <!-- Inner Warm Ochre 'Cue' Horizon Beacon -->
+  <circle cx="42" cy="32" r="6" fill="#F3A833"/>
+</svg>

@@ -1,0 +1,65 @@
+/* CurbCue policy pages. Colours and fonts are the curbcue-brand tokens (light and dark). */
+@font-face { font-family: 'Atkinson Hyperlegible'; src: url('fonts/AtkinsonHyperlegible-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Atkinson Hyperlegible'; src: url('fonts/AtkinsonHyperlegible-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Bricolage Grotesque'; src: url('fonts/BricolageGrotesque-Variable.ttf') format('truetype'); font-weight: 200 800; font-display: swap; }
+
+:root {
+  --cc-surface-page: #F6F4EE;
+  --cc-surface-card: #FFFFFF;
+  --cc-text-primary: #101A15;
+  --cc-text-secondary: #3E4F46;
+  --cc-brand-primary: #146343;
+  --cc-brand-primary-hover: #0E4D33;
+  --cc-border-subtle: #D5D0C3;
+  --cc-font-display: 'Bricolage Grotesque', -apple-system, BlinkMacSystemFont, sans-serif;
+  --cc-font-sans: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, sans-serif;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cc-surface-page: #0E1512;
+    --cc-surface-card: #15201B;
+    --cc-text-primary: #F2F0E8;
+    --cc-text-secondary: #B8C4BC;
+    --cc-brand-primary: #27A873;
+    --cc-brand-primary-hover: #34BE86;
+    --cc-border-subtle: #2A3B32;
+  }
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--cc-surface-page);
+  color: var(--cc-text-primary);
+  font-family: var(--cc-font-sans);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+a { color: var(--cc-brand-primary); text-underline-offset: 0.15em; }
+a:hover { color: var(--cc-brand-primary-hover); }
+a:focus-visible { outline: 3px solid var(--cc-brand-primary); outline-offset: 2px; border-radius: 2px; }
+
+.skip { position: absolute; left: -999px; top: 0; }
+.skip:focus { left: 1rem; top: 1rem; background: var(--cc-surface-card); padding: 0.5rem 1rem; z-index: 1; }
+
+header.site, main, footer.site { max-width: 42rem; margin: 0 auto; padding: 0 1rem; }
+header.site {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem 1.5rem;
+  padding-top: 1.25rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--cc-border-subtle);
+}
+.brand { display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none; color: var(--cc-text-primary);
+  font-family: var(--cc-font-display); font-weight: 700; font-size: 1.375rem; }
+nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+nav a { display: inline-block; padding: 0.5rem 0; min-height: 44px; line-height: 28px; }
+nav a[aria-current="page"] { color: var(--cc-text-primary); font-weight: 700; text-decoration: none; }
+
+main { padding-top: 2rem; padding-bottom: 3rem; }
+h1, h2 { font-family: var(--cc-font-display); line-height: 1.2; }
+h1 { font-size: 2.25rem; margin: 0 0 1.5rem; }
+h2 { font-size: 1.375rem; margin: 2.25rem 0 0.5rem; }
+ul { padding-left: 1.25rem; }
+li { margin: 0.25rem 0; }
+
+footer.site { padding-top: 1.5rem; padding-bottom: 2rem; border-top: 1px solid var(--cc-border-subtle);
+  color: var(--cc-text-secondary); font-size: 1rem; }
